@@ -133,7 +133,7 @@ const Bill = ({
                   return (
                     <tr key={"pos-bill-item-" + index}>
                       <td>{index + 1}</td>
-                      <td>{item?.name}</td>
+                      <td>{item?.name}{item?.category && (<div className="tbl-item-category">{item?.category}</div>)}</td>
                       <td>{parseFloat(item?.price).toFixed(2)}</td>
                       <td>
                         <input
